@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import roslib.packages
+
+# PORT value is equal to "recv_port" value at rospeex_core/launch/rospeex_spi.launch
+PORT = 5002
+
+# EPD_PORT value is equal to "send_port" value at rospeex_core/launch/rospeex_spi.launch
+EPD_PORT = 16001
+
+# get script directory
+path = roslib.packages.find_node('rospeex_audiomonitor', 'audio_monitor')
+    
+
+if len(path) > 0:
+    # execute audio monitor
+    print 'hoge'
+    cmd = '%s -filename rec/rec -port %d -epd %d'%(path[0],PORT,EPD_PORT)
+    os.system(cmd)
