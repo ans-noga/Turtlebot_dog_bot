@@ -1,0 +1,7 @@
+<launch>
+  <!-- launch rospeex_local (ss/sr/spi) -->
+  <include file="$(find rospeex_launch)/launch/rospeex_local.launch" />
+
+  <!-- sample node -->
+  <node name="follow" pkg="maximum_bot" type="turtle_demo_en.py" output="screen"/>
+</launch>

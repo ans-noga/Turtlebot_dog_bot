@@ -1,0 +1,11 @@
+<launch>
+  <!-- sample node -->
+  <node name="track" pkg="dog_bot_final" type="Tracking.py" output="screen"/>
+
+<!-- sample node -->
+  <node name="bark" pkg="dog_bot_final" type="Bark.py" output="screen"/>
+
+<!-- sample node -->
+  <node name="follow" pkg="dog_bot_final" type="Follower.py" output="screen"/>
+
+</launch>
